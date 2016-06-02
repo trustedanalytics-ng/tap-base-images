@@ -12,6 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM node:4.4.5
+FROM node:4.4.5-slim
 
 ADD kerberos-jwt-1.1.tar.gz /
