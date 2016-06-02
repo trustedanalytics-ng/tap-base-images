@@ -13,4 +13,6 @@
 # limitations under the License.
 #
 
-FROM jetty:9.3.9-jre8
+FROM java:openjdk-8u91-jre
+
+ADD kerberos-jwt-1.1.tar.gz /
