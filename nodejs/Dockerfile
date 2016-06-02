@@ -12,9 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM debian:8
-
-ADD node-v6.2.0-linux-x64.tar.xz /
-
-RUN cp -r node-v6.2.0-linux-x64/* /usr/local/ \
-    && rm -r /node-v6.2.0-linux-x64
+FROM node:4.4.5
