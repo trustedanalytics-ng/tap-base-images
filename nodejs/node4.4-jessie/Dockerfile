@@ -13,3 +13,5 @@
 # limitations under the License.
 
 FROM node:4.4.5
+
+ADD kerberos-jwt-1.1.tar.gz /
