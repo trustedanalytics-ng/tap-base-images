@@ -1,7 +1,7 @@
 # Building the image
 ```docker build -t node4.4-jessie .```
 
-The image also resides in quay.
+The image also resides in quay: https://quay.io/repository/trustedanalytics/tap-base-node under node4.4-jessie tag.
 
 # Running the container
 First you need to get config files apropriate for the environment you want to run container in: `krb5.conf` and `cacert.pem`.
