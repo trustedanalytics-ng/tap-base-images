@@ -15,3 +15,5 @@
 FROM python:2.7.11-slim
 
 ADD kerberos-jwt-1.1.tar.gz /
+
+RUN pip install --no-cache-dir virtualenv
