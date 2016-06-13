@@ -1,5 +1,5 @@
 # Building the image
-```docker build -t tap-base-python:python2.7-jessie .```
+```./build.sh```
 
 The image also resides in quay: https://quay.io/repository/trustedanalytics/tap-base-python under `python2.7-jessie` tag.
 

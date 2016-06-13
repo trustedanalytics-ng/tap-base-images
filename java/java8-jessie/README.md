@@ -1,5 +1,5 @@
 # Building the image
-```docker build -t tap-base-java:java8-jessie .```
+```./build.sh```
 
 The image also resides in quay: https://quay.io/repository/trustedanalytics/tap-base-java under `java8-jessie` tag.
 

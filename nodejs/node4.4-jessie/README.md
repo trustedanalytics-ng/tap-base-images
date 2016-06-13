@@ -1,5 +1,5 @@
 # Building the image
-```docker build -t tap-base-node:node4.4-jessie .```
+```./build.sh```
 
 The image also resides in quay: https://quay.io/repository/trustedanalytics/tap-base-node under `node4.4-jessie` tag.
 
