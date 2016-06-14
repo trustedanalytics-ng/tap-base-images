@@ -16,6 +16,6 @@
 #
 
 CURRENT_DIR=$(pwd)
-TAG=tap-base-binary:binary-jesse
+TAG=tap-base-binary:binary-jessie
 
 ../../scripts/build_image.sh -d ${CURRENT_DIR} -t ${TAG}

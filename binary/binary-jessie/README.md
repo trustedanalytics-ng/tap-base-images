@@ -1,13 +1,13 @@
 # Building the image
 ```./build.sh```
 
-The image also resides in quay: https://quay.io/repository/trustedanalytics/tap-base-binary under `binary-jesse` tag.
+The image also resides in quay: https://quay.io/repository/trustedanalytics/tap-base-binary under `binary-jessie` tag.
 
 # Running the container
 ## Without kerberos
 Just run it in any way convenient to you, for example:
 ```
-docker run -it tap-base-binary:binary-jesse /bin/bash
+docker run -it tap-base-binary:binary-jessie /bin/bash
 ```
 
 ## With kerberos
@@ -16,5 +16,5 @@ You can copy them from CDH. There are located in: `/etc/krb5.conf` and `/var/krb
 
 Then you run the container mounting them as data volumes, for example:
 ```
-docker run -it -v [absolute path]/krb5.conf:/etc/krb5.conf -v [absolute path]/cacert.pem:/var/krb5kdc/cacert.pem tap-base-binary:binary-jesse /bin/bash
+docker run -it -v [absolute path]/krb5.conf:/etc/krb5.conf -v [absolute path]/cacert.pem:/var/krb5kdc/cacert.pem tap-base-binary:binary-jessie /bin/bash
 ```
