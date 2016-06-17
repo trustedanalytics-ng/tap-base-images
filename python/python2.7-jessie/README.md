@@ -1,8 +1,6 @@
 # Building the image
 ```./build.sh```
 
-The image also resides in quay: https://quay.io/repository/trustedanalytics/tap-base-python under `python2.7-jessie` tag.
-
 # Running the container
 ## Without kerberos
 Just run it in any way convenient to you, for example:
