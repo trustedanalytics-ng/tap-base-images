@@ -1,5 +1,7 @@
 # Building the image
-```./build.sh```
+```
+./build.sh
+```
 
 # Running the container
 ## Without kerberos
