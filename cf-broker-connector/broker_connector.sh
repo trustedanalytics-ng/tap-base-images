@@ -63,7 +63,7 @@ HTTP_BODY=$(echo $HTTP_RESPONSE | sed -e 's/HTTPSTATUS\:.*//g')
 HTTP_STATUS=$(echo $HTTP_RESPONSE | tr -d '\n' | sed -e 's/.*HTTPSTATUS://')
 
 if [ "$HTTP_STATUS" != "$EXPECTED_CODE" ]; then
-    echo "Bas response status! Code: $HTTP_STATUS Response: $HTTP_BODY"
+    echo "Bas response status! Received code: $HTTP_STATUS, expected: $EXPECTED_CODE Response body: $HTTP_BODY"
     exit 1
 fi
 
