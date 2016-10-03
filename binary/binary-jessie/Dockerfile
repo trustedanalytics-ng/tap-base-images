@@ -14,5 +14,6 @@
 
 FROM debian:jessie
 
-ADD kerberos-jwt-1.1.tar.gz /
+RUN apt-get update && apt-get install -y ca-certificates
 
+ADD kerberos-jwt-1.1.tar.gz /
