@@ -1,0 +1,5 @@
+---
+client:
+  hosts:
+    - ${ELASTIC_SERVICE:127.0.0.1}
+  port: ${ELASTIC_PORT:9200}
