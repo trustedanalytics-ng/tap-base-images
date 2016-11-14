@@ -1,4 +1,4 @@
-FROM nginx:1.11.4
+FROM nginx:1.11.5
 MAINTAINER Piotr Skindel "piotr.skindel@intel.com"
 
 COPY mime.types /etc/nginx/mime.types
