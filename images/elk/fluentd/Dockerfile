@@ -5,5 +5,6 @@ RUN ulimit -n 65536
 ENV DEBIAN_FRONTEND noninteractive
 COPY td-agent.conf /etc/td-agent/td-agent.conf
 COPY build.sh /tmp/build.sh
+RUN chmod 777 /tmp/build.sh
 RUN /tmp/build.sh
 ENTRYPOINT ["td-agent"]

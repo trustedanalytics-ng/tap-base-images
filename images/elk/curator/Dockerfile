@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM tapimages.us.enableiot.com:8080/tap-base-python:python2.7-jessie
+FROM tap-base-python:python2.7-jessie
 MAINTAINER mariusz.klonowski@intel.com
 
 RUN mkdir /build

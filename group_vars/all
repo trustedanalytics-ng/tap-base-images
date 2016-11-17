@@ -1,0 +1,37 @@
+###########################################################################
+# Copyright (c) 2016 Intel Corporation                                    #
+#                                                                         #
+# Licensed under the Apache License, Version 2.0 (the "License");         #
+# you may not use this file except in compliance with the License.        #
+# You may obtain a copy of the License at                                 #
+#                                                                         #
+#    http://www.apache.org/licenses/LICENSE-2.0                           #
+#                                                                         #
+# Unless required by applicable law or agreed to in writing, software     #
+# distributed under the License is distributed on an "AS IS" BASIS,       #
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.#
+# See the License for the specific language governing permissions and     #
+# limitations under the License.                                          #
+###########################################################################
+
+---
+
+#registry_host: "localhost"
+
+#registry_distribution_port: 5001
+
+#kerberos_file_name: "kerberos-jwt-1.1.tar.gz"
+
+#workdir: "{{ ansible_env.HOME }}/tap-base-images"
+
+
+tap_base_images:
+  - { name: "tap-base-binary", tag: "binary-jessie", path: "images/binary/binary-jessie" }
+  - { name: "tap-base-java", tag: "java8-jessie", path: "images/java/java8-jessie" }
+  - { name: "tap-base-node", tag: "node4.4-jessie", path: "images/nodejs/node4.4-jessie" }
+  - { name: "tap-base-python", tag: "python2.7-jessie", path: "images/python/python2.7-jessie" }
+  - { name: "tap-base-python", tag: "python3.4", path: "images/python/python3.4" }
+  - { name: "tap-base-cf-broker-connector", tag: "curl-latest", path: "images/cf-broker-connector" }
+  - { name: "fluentd-elasticsearch", tag: "1.5.0", path: "images/elk/fluentd" }  
+  - { name: "elasticsearch-curator", tag: "4.1.0", path: "images/elk/curator" }
+  - { name: "nginx-ssl", path: "images/nginx-ssl" }
