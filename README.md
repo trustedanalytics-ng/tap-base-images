@@ -1,6 +1,11 @@
 # tap-base-images
 Dockerfiles with base images for TAP components
 
+## Adding a new base image
+1. Create a new directory for your image in `images` directory (e.g. `mkdir ./images/my_image`).
+2. Place `Dockerfile`, `build.sh` script and all other required files in your image directory.
+3. Add a new entry to `tap_base_images` list in `group_vars/all` file (e.g. `- { name: "my_image", tag: "my_tag", path: "/images/my_image"`).
+
 ## Building images using Ansible
 
 Prerequisites:

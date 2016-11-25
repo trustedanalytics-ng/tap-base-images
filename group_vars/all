@@ -24,7 +24,8 @@
 
 #workdir: "{{ ansible_env.HOME }}/tap-base-images"
 
-
+# List of base images. Image will be tagged as latest, if 'tag' parameter is ommited.
+# 'path' parameter is a relative path to image's Dockerfile.
 tap_base_images:
   - { name: "tap-base-binary", tag: "binary-jessie", path: "images/binary/binary-jessie" }
   - { name: "tap-base-java", tag: "java8-jessie", path: "images/java/java8-jessie" }
@@ -35,3 +36,4 @@ tap_base_images:
   - { name: "fluentd-elasticsearch", tag: "1.5.0", path: "images/elk/fluentd" }  
   - { name: "elasticsearch-curator", tag: "4.1.0", path: "images/elk/curator" }
   - { name: "nginx-ssl", path: "images/nginx-ssl" }
+  - { name: "configmap-broker", tag: "curl-latest", path: "images/configmap-broker" }
