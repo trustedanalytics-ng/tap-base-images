@@ -27,29 +27,30 @@ function check_if_exists() {
 check_if_exists "ACTION" $ACTION
 check_if_exists "CONFIGMAP_NAME" $CONFIGMAP_NAME
 check_if_exists "CONFIGMAP_SERVICE_NAME" $CONFIGMAP_SERVICE_NAME
-check_if_exists "CONFIGMAP_SERVICE_URL" $CONFIGMAP_SERVICE_URL
+check_if_exists "CONFIGMAP_SERVER_NAME" $CONFIGMAP_SERVER_NAME
+check_if_exists "CONFIGMAP_SERVER_URL" $CONFIGMAP_SERVER_URL
 
-CONFIGMAP_SERVICE_NAME=$(echo $CONFIGMAP_SERVICE_NAME | sed 's/-/_/g')
+CONFIGMAP_SERVER_NAME=$(echo $CONFIGMAP_SERVER_NAME | sed 's/-/_/g')
 
-host=${CONFIGMAP_SERVICE_NAME}_SERVICE_HOST
+host=${CONFIGMAP_SERVER_NAME}_SERVICE_HOST
 host=${host^^}
 check_if_exists ${host} "${!host}"
 
-port=${CONFIGMAP_SERVICE_NAME}_SERVICE_PORT
+port=${CONFIGMAP_SERVER_NAME}_SERVICE_PORT
 port=${port^^}
 check_if_exists ${port} "${!port}"
 
-ADDRESS="${!host}:${!port}"
+CONFIGMAP_SERVER_ADDRESS="${!host}:${!port}"
 
 CREDS=""
-if [ "$CONFIGMAP_SERVICE_USER" != "" ]; then
-    CREDS="--user $CONFIGMAP_SERVICE_USER:$CONFIGMAP_SERVICE_PASS"
+if [ "$CONFIGMAP_SERVER_USER" != "" ]; then
+    CREDS="--user $CONFIGMAP_SERVER_USER:$CONFIGMAP_SERVER_PASS"
 fi
 
 if [ "$ACTION" = "CREATE_DATAMAP" ] || [ "$ACTION" = "CREATE_VCAP" ] ; then
 
     EXPECTED_CODE=200
-    HTTP_RESPONSE=$(curl -s --write-out "HTTPSTATUS:%{http_code}" $CREDS ${ADDRESS}${CONFIGMAP_SERVICE_URL}/${CONFIGMAP_NAME})
+    HTTP_RESPONSE=$(curl -s --write-out "HTTPSTATUS:%{http_code}" $CREDS ${CONFIGMAP_SERVER_ADDRESS}${CONFIGMAP_SERVER_URL}/${CONFIGMAP_NAME})
 
     HTTP_BODY=$(echo $HTTP_RESPONSE | sed -e 's/HTTPSTATUS\:.*//g')
     HTTP_STATUS=$(echo $HTTP_RESPONSE | tr -d '\n' | sed -e 's/.*HTTPSTATUS://')
@@ -75,7 +76,7 @@ if [ "$ACTION" = "CREATE_DATAMAP" ] || [ "$ACTION" = "CREATE_VCAP" ] ; then
         echo "{" $(get_env_configmap | tr '\n' ' ' | sed 's/,\s$//') "}"
 
     else
-        echo $CONFIGMAP_DATA | jq "{name: \"$CONFIGMAP_NAME\", credentials: .}"
+        echo $CONFIGMAP_DATA | jq "{name: \"$CONFIGMAP_SERVICE_NAME\", credentials: .}"
     fi
 
 else

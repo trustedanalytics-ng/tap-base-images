@@ -16,6 +16,6 @@
 #
 
 DOCKERFILE_DIR=$(pwd)
-TAG=tap-base-configmap-broker:curl-latest
+TAG=tap-base-configmap-broker:1.0.0
 
 docker build -t ${TAG} ${DOCKERFILE_DIR}
