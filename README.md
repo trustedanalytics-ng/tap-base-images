@@ -17,3 +17,19 @@ define specific images to build.
 
 Run `push.sh`  in order to build all TAP base images and push them to Docker registry (by default: `localhost:5001`).
 Registry host and port can be defined in `group_vars/all` file.
+
+## Images 
+
+### Base images used for TAP applications
+
+* [Binary image based on debian:jesse](/images/binary/binary-jessie)
+* [Python 2.7 image based on python:2.7.11-slim](/images/python/python2.7-jessie)
+* [Python 3.4 image based on python:3.4.5-slim](/images/python/python3.4)
+* [NodeJS image based on node:4.4.5-slim](/images/nodejs/node4.4-jessie)
+* [Java image based on java:openjdk-8u91-jre](/images/java/java8-jessie)
+
+### Images used in core TAP
+
+* [cf broker connector for porting cloud foundry](/images/cf-broker-connector)
+* [Elastic Search, Kibana, FluentD](/images/elk)
+* [Nginx with SSL](/images/nginx-ssl)
