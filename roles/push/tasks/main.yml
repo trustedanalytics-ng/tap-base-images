@@ -21,7 +21,7 @@
     name: "{{ item.name }}"
     tag: "{{ item.tag | default(omit) }}"
     repository: "{{ registry_host }}:{{ registry_port }}/{{ item.name }}"
-    push: "yes"
+    push: "{{ push_images }}"
     buildargs:
       http_proxy: "{{ ansible_env.http_proxy | default('') }}"
       https_proxy: "{{ ansible_env.https_proxy | default('') }}"
