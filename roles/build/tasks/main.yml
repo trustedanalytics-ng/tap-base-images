@@ -18,4 +18,3 @@
 
 - include: prepare_workdir.yml
 - include: build_images.yml
-

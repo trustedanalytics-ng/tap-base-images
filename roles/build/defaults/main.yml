@@ -19,4 +19,3 @@
 workdir: "{{ ansible_env.HOME }}/tap-base-images"
 
 kerberos_file_name: "kerberos-jwt-1.1.tar.gz"
-

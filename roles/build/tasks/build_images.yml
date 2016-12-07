@@ -21,10 +21,9 @@
     path: "{{ workdir }}/{{ item.path }}"
     name: "{{ item.name }}"
     tag: "{{ item.tag | default(omit) }}"
-    pull: False
+    pull: "False"
     buildargs:
       http_proxy: "{{ ansible_env.http_proxy | default('') }}"
       https_proxy: "{{ ansible_env.https_proxy | default('') }}"
       no_proxy: "{{ ansible_env.no_proxy | default('') }}"
   with_items: "{{ tap_base_images }}"
-

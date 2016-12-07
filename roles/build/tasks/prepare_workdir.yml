@@ -28,7 +28,6 @@
   file:
     src: "{{ workdir }}/resources/{{ kerberos_file_name }}"
     dest: "{{ workdir }}/{{ item.path }}/{{ kerberos_file_name }}"
-    force: yes
+    force: "yes"
     state: hard
   with_items: "{{ tap_base_images }}"
-

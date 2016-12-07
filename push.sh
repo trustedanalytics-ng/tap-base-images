@@ -16,4 +16,4 @@
 # limitations under the License.                                          #
 ###########################################################################
 
-exec ansible-playbook push.yml -i inventory/local.yml $@
+exec ansible-playbook push.yml -i inventory/local $@
