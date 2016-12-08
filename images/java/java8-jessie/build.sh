@@ -18,4 +18,4 @@
 CURRENT_DIR=$(pwd)
 TAG=tap-base-java:java8-jessie
 
-../../scripts/build_image.sh -d ${CURRENT_DIR} -t ${TAG}
+../../../scripts/build_image.sh -d ${CURRENT_DIR} -t ${TAG}

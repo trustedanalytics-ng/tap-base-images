@@ -18,4 +18,4 @@
 CURRENT_DIR=$(pwd)
 TAG=tap-base-python:python3.4
 
-../../scripts/build_image.sh -d ${CURRENT_DIR} -t ${TAG}
+../../../scripts/build_image.sh -d ${CURRENT_DIR} -t ${TAG}

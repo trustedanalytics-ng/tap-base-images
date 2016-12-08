@@ -1,3 +1,5 @@
+#!/bin/bash -x
+
 ###########################################################################
 # Copyright (c) 2016 Intel Corporation                                    #
 #                                                                         #
@@ -14,16 +16,4 @@
 # limitations under the License.                                          #
 ###########################################################################
 
----
-
-- name: Push TAP base images to registry
-  docker_image:
-    name: "{{ item.name }}"
-    tag: "{{ item.tag | default(omit) }}"
-    repository: "{{ registry_host }}:{{ registry_port }}/{{ item.name }}"
-    push: "{{ push_images }}"
-    buildargs:
-      http_proxy: "{{ ansible_env.http_proxy | default('') }}"
-      https_proxy: "{{ ansible_env.https_proxy | default('') }}"
-      no_proxy: "{{ ansible_env.no_proxy | default('') }}"
-  with_items: "{{ tap_base_images }}"
+exec ansible-playbook tag.yml -i inventory/local $@

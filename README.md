@@ -15,7 +15,8 @@ Prerequisites:
 Run `build.sh` in order to build all TAP base images. Modify `tap_base_images` list in `group_vars/all` file in order to
 define specific images to build.
 
-Run `push.sh`  in order to build all TAP base images and push them to Docker registry (by default: `localhost:5001`).
+Run `tag.sh`  in order to build all TAP base images and tag them with `tapimages:8080` prefix, so thay can be used during
+build of TAP compoments.
 Registry host and port can be defined in `group_vars/all` file.
 
 ## Images 
