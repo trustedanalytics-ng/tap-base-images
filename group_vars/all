@@ -38,4 +38,5 @@ tap_base_images:
   - { name: "fluentd-elasticsearch", tag: "1.5.0", path: "images/elk/fluentd" }  
   - { name: "elasticsearch-curator", tag: "4.1.0", path: "images/elk/curator" }
   - { name: "nginx-ssl", path: "images/nginx-ssl" }
+  - { name: "google_nginx", path: "images/google_nginx" }
   - { name: "configmap-broker", tag: "curl-latest", path: "images/configmap-broker" }
