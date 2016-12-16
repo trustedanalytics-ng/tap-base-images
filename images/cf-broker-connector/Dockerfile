@@ -17,4 +17,5 @@
 
 FROM tutum/curl:latest
 ADD broker_connector.sh /
+RUN chmod +x broker_connector.sh
 CMD ["/broker_connector.sh"]
