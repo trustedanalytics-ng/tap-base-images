@@ -19,6 +19,7 @@
 - hosts: all
   vars_files:
     - group_vars/all
+  become: "{{ become_root | default('no') }}"
   roles:
     - build
     - tag

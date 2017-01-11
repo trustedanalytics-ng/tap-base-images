@@ -19,6 +19,9 @@ Run `tag.sh`  in order to build all TAP base images and tag them with `tapimages
 build of TAP compoments.
 Registry host and port can be defined in `group_vars/all` file.
 
+If you need `sudo` privileges for using Docker, uncomment `#become_root: no` line in `group_vars/all` file and change
+`become_root` value to `yes`.
+
 ## Images 
 
 ### Base images used for TAP applications

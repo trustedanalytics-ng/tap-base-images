@@ -26,6 +26,8 @@
 
 #workdir: "{{ ansible_env.HOME }}/tap-base-images"
 
+#become_root: "no"
+
 # List of base images. Image will be tagged as latest, if 'tag' parameter is ommited.
 # 'path' parameter is a relative path to image's Dockerfile.
 tap_base_images:
