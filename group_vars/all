@@ -37,8 +37,8 @@ tap_base_images:
   - { name: "tap-base-python", tag: "python2.7-jessie", path: "images/python/python2.7-jessie" }
   - { name: "tap-base-python", tag: "python3.4", path: "images/python/python3.4" }
   - { name: "tap-base-cf-broker-connector", tag: "curl-latest", path: "images/cf-broker-connector" }
+  - { name: "tap-base-configmap-broker", tag: "curl-latest", path: "images/configmap-broker" }
   - { name: "fluentd-elasticsearch", tag: "1.5.0", path: "images/elk/fluentd" }  
   - { name: "elasticsearch-curator", tag: "4.1.0", path: "images/elk/curator" }
   - { name: "nginx-ssl", tag: "1.0.2", path: "images/nginx-ssl" }
   - { name: "google_nginx", path: "images/google_nginx" }
-  - { name: "configmap-broker", tag: "curl-latest", path: "images/configmap-broker" }
