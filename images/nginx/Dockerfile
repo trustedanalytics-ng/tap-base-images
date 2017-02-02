@@ -13,4 +13,4 @@
 # limitations under the License.
 #
 
-FROM gcr.io/google_containers/nginx
+FROM nginx:stable

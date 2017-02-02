@@ -16,6 +16,6 @@
 #
 
 CURRENT_DIR=$(pwd)
-TAG=google_nginx
+TAG=nginx:stable
 
 ../../scripts/build_image.sh -d ${CURRENT_DIR} -t ${TAG}
