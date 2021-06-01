@@ -2,5 +2,5 @@ click==6.6
 elasticsearch==2.4.0
 elasticsearch-curator==4.1.1
 PyYAML==3.12
-urllib3==1.18
+urllib3==1.26.5
 voluptuous==0.9.3
